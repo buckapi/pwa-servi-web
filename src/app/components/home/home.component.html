@@ -8,8 +8,7 @@
         <span>Síguenos en</span>
         <a href="https://www.facebook.com/profile.php?id=61567176527689&mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/somos_servi_web?igsh=MWExM3JtanhvNTY5aw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#"></a>
-        <a href="#"></a>
+        
     </div>
     <div class="container">
         <div class="row g-4 justify-content-between align-items-center">
@@ -22,7 +21,7 @@
                     <p class="wow fadeInUp" data-wow-delay=".5s">Crea y Crece Tu Espacio Digital con Servi-web <br>
                         Impulsa Tu Presencia en Línea</p>
                     <div class="hero-author">
-                        <a href="#" class="theme-btn bg-color-2 wow fadeInUp" data-wow-delay=".7s">
+                        <a href="#planeshosting" class="theme-btn bg-color-2 wow fadeInUp" data-wow-delay=".7s">
                             Consulta nuestros planes <i class="fas fa-long-arrow-alt-right"></i>
                         </a>
                         <span class="button-text wow fadeInUp" data-wow-delay=".9s">
@@ -202,7 +201,7 @@
                 </div>
                 <p class="text-white mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">¡Aprovecha nuestra exclusiva Venta
                     Flash de Alojamiento y lleva tu presencia en línea al siguiente nivel!</p>
-                <a href="#" class="theme-btn bg-color-2 mt-5 wow fadeInUp" data-wow-delay=".4s">Comenzar <i
+                <a (click)="global.setRoute('planing')" class="theme-btn bg-color-2 mt-5 wow fadeInUp" data-wow-delay=".4s">Comenzar <i
                         class="fas fa-long-arrow-alt-right"></i></a>
             </div>
             <div class="col-lg-8">
@@ -219,7 +218,7 @@
  -->
                             </div>
                             <h4>El Alojamiento Web Implica Rentar <br> un Servidor de un Proveedor de Hosting.</h4>
-                            <a href="#" class="theme-btn">Ver planes <i class="fa-regular fa-chevrons-right"></i></a>
+                            <a  class="theme-btn" href="#planeshosting">Ver planes <i class="fa-regular fa-chevrons-right"></i></a>
                         </div>
                     </div>
 
@@ -408,7 +407,7 @@
                             </ul>
 
                             <div class="pricing-button">
-                                <a href="#" class="pricing-btn">
+                                <a (click)="global.setRoute('planing')" class="pricing-btn">
                                     Contratar
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -509,7 +508,7 @@
                             </ul>
 
                             <div class="pricing-button">
-                                <a href="#" class="pricing-btn">
+                                <a (click)="global.setRoute('planing')" class="pricing-btn">
                                     Contratar
                                     <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
@@ -538,7 +537,7 @@
                         <img src="assets/img/hosting/icon-3.png" alt="img">
                     </div>
                     <div class="content">
-                        <h3><a href="#">Venta de dominios</a></h3>
+                        <h3><a (click)="global.setRoute('domine')">Venta de dominios</a></h3>
                         <p>
                             Incluye 1 año de aparcamiento del dominio. Servi-web te regala el primer año de cualquier
                             dominio siempre y cuando se rente el hosting con ellos mismos
@@ -550,7 +549,7 @@
                             <li> - .net - $ 449</li>
                             <li>- pregunta por mas</li>
                         </ul>
-                        <a href="#" class="theme-btn mt-4">¡Adquiere tu dominio ahora! <i
+                        <a (click)="global.setRoute('domine')" class="theme-btn mt-4">¡Adquiere tu dominio ahora! <i
                                 class="fa-regular fa-chevrons-right"></i></a>
 
                     </div>
@@ -562,12 +561,12 @@
                         <img src="assets/img/hosting/icon-13.png" alt="img">
                     </div>
                     <div class="content">
-                        <h3><a href="#planeshosting">Servicio de Hosting</a></h3>
+                        <h3><a (click)="global.setRoute('planing')">Servicio de Hosting</a></h3>
                         <p>
                             El servicio de hosting incluye tambien, Dar de alta los servicios, vincular DNS,
                             administracion del cpanel, Activacion del SSL, Activacion de los correos
                             No hay servicio de pago mensual todavia </p>
-                        <a href="#" class="theme-btn mt-4">¡Contrata tu hosting hoy! <i
+                        <a (click)="global.setRoute('planing')" class="theme-btn mt-4">¡Contrata tu hosting hoy! <i
                                 class="fa-regular fa-chevrons-right"></i></a>
 
                     </div>
@@ -579,12 +578,12 @@
                         <img src="assets/img/hosting/icon-14.png" alt="img">
                     </div>
                     <div class="content">
-                        <h3><a href="#">Desarrollo de paginas web</a></h3>
+                        <h3><a (click)="global.setRoute('developerweb')">Desarrollo de paginas web</a></h3>
                         <p>crea un sitio web que no solo se vea bien, sino que también comunique claramente quién eres y
                             qué ofreces. ¡Comencemos tu proyecto hoy!
                             Todo esto por un costo inicial de <span>$4,000 MXN.</span>
                             Ponte en contacto para mas informacion </p>
-                        <a href="#" class="theme-btn mt-4">¡Desarrolla tu sitio web por solo $4,000! <i
+                        <a (click)="global.setRoute('developerweb')" class="theme-btn mt-4">¡Desarrolla tu sitio web por solo $4,000! <i
                                 class="fa-regular fa-chevrons-right"></i></a>
 
                     </div>
@@ -712,7 +711,7 @@
                 <h2 class="text-white wow fadeInUp" data-wow-delay=".3s">Soporte de Alojamiento Experto 24/7 <br> Que
                     Nuestros Clientes Aman</h2>
             </div>
-            <a href="#" class="theme-btn bg-color-2 mt-5 wow fadeInUp" data-wow-delay=".7s">Habla con un Especialista <i
+            <a (click)="global.setRoute('contact')" class="theme-btn bg-color-2 mt-5 wow fadeInUp" data-wow-delay=".7s">Habla con un Especialista <i
                     class="fas fa-long-arrow-alt-right"></i></a>
 
         </div>

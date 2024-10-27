@@ -10,6 +10,9 @@ import { GlobalService } from './services/global.service';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from './components/contact/contact.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { PlaningComponent } from './components/planing/planing.component';
+import { DomineComponent } from './components/domine/domine.component';
+import { DeveloperwebComponent } from './components/developerweb/developerweb.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +24,10 @@ import { FaqComponent } from './components/faq/faq.component';
     HeaderComponent,
     CommonModule,
     ContactComponent,
-    FaqComponent
+    FaqComponent,
+    PlaningComponent,
+    DomineComponent,
+    DeveloperwebComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
