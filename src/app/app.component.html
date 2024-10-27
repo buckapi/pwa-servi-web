@@ -2,6 +2,9 @@
 	<app-header ></app-header>
 	<app-home  [hidden]="global.activeRoute!='home'"></app-home>
 	<app-about [hidden]="global.activeRoute!='about'"></app-about>
+    <app-contact [hidden]="global.activeRoute!='contact'"></app-contact>
+    <app-faq [hidden]="global.activeRoute!='faq'"></app-faq>
+
     <app-footer ></app-footer>
 
 	
@@ -39,7 +42,7 @@
                                         <i class="fal fa-map-marker-alt"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
+                                        <a>Guadalajara, Jalisco, MX</a>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -47,7 +50,7 @@
                                         <i class="fal fa-envelope"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a href="mailto:infoexample.com"><span class="mailto:infoexample.com">infoexample.com</span></a>
+                                        <a href="mailto:infoexample.com"><span class="mailto:contacto&#64;servi-web.com">contacto&#64;servi-web.com</span></a>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -55,7 +58,7 @@
                                         <i class="fal fa-clock"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
+                                        <a target="_blank" href="#">Lunes-Domingo, 24/7 H.</a>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -63,20 +66,19 @@
                                         <i class="far fa-phone"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a href="tel:+11002345909">+11002345909</a>
+                                        <a href="tel:+523314033741">+52 331 403 3741</a>
                                     </div>
                                 </li>
                             </ul>
                             <div class="header-button mt-4">
-                                <a href="#" class="theme-btn text-center">
+                                <a (click)="global.setRoute('contact')" class="theme-btn text-center">
                                    Consultas <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
                             </div>
                             <div class="social-icon d-flex align-items-center">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61567176527689&mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/somos_servi_web?igsh=MWExM3JtanhvNTY5aw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                              
                             </div>
                         </div>
                     </div>

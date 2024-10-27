@@ -5,14 +5,18 @@
                 <ul class="contact-list">
                     <li>
                         <i class="far fa-envelope"></i>
-                        <a href="mailto:example.com">example.com</a>
+                        <a href="mailto:contacto&#64;servi-web.com">contacto&#64;servi-web.com</a>
                     </li>
                     <li>
                         <i class="fa-regular fa-phone"></i>
-                        <a href="tel:+20866660112">+208-6666-0112</a>
+                        <a href="tel:+523314033741">+52 331 403 3741</a>
+                    </li>
+                    <li>
+                        <i class=" far fa-location"></i>
+                        <a >Guadalajara, Jalisco, MX</a>
                     </li>
                 </ul>
-                <p>Descuento Flash de Hostech: desde <b>$3,49/mes</b> por tiempo limitado</p>
+                <p>Descuento Flash de Hosting: desde <b>$2,899/ Año</b> por tiempo limitado</p>
                 <ul class="list">
                     <li><i class="fa-light fa-comments"></i><a href="">Chat</a></li>
                     <!-- <li><i class="fa-light fa-user"></i>
@@ -30,10 +34,10 @@
                 <div class="header-main">
                     <div class="header-left">
                         <div class="logo">
-                            <a href="index.html" class="header-logo">
+                            <a (click)="global.setRoute('home')" class="header-logo">
                                 <img src="assets/img/logo/white-logo.png" alt="logo-img">
                             </a>
-                            <a href="index.html" class="header-logo-2">
+                            <a (click)="global.setRoute('home')" class="header-logo-2">
                                 <img src="assets/img/logo/black-logo.png" alt="logo-img">
                             </a>
                         </div>
@@ -66,7 +70,7 @@
                                                 <li class="border-none">
                                                     <div class="homemenu-items">
                                                         <div class="row">
-                                                            <div class="col-lg-4" (click)="global.setRoute('about')">
+                                                            <div class="col-lg-12" (click)="global.setRoute('about')">
                                                                 <div class="homemenu-list">
                                                                     <div class="icon">
                                                                         <img src="assets/img/menu-icon/about.png" alt="img">
@@ -79,45 +83,44 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-lg-4">
-                                                                <div class="homemenu-list">
-                                                                    <div class="icon">
-                                                                        <img src="assets/img/menu-icon/black-friday.png" alt="img">
-                                                                    </div>
-                                                                    <div class="content">
-                                                                        <h6><a (click)="global.setRoute('about')">Equipo</a></h6>
-                                                                        <p>
-                                                                            Profesionales al servicio
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                           
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li class="has-dropdown active d-xl-none">
-                                            <a (click)="global.setRoute('about')" class="border-none">
+                                            <a class="border-none">
                                             Servicios
                                             <i class="fas fa-angle-down"></i>
                                             </a>
-                                      
+                                            <ul class="submenu">
+                                                <li><a (click)="global.setRoute('about')">Hosting</a></li>
+                                                <li><a (click)="global.setRoute('about')">Dominios</a></li>
+                                                <li><a (click)="global.setRoute('about')">Paginas Web</a></li>
+                                                <li><a (click)="global.setRoute('about')">Soporte</a></li>
+                                            </ul>                                      
                                         </li>
                                         <li class="has-dropdown menu-thumb">
-                                            <a href="index.html">
-                                            Hosting y Dominios
+                                            <a >Servicios
+                                            
                                             <i class="fas fa-angle-down"></i>
                                             </a>
+                                            <ul class="submenu">
+                                                <li><a (click)="global.setRoute('about')">Hosting</a></li>
+                                                <li><a (click)="global.setRoute('about')">Dominios</a></li>
+                                                <li><a (click)="global.setRoute('about')">Paginas Web</a></li>
+                                                <li><a (click)="global.setRoute('about')">Soporte</a></li>
+                                            </ul>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a >
                                             Soporte
                                             <i class="fas fa-angle-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="#">Faq</a></li>
-                                                <li><a href="#">Contacto</a></li>
+                                                <li><a (click)="global.setRoute('faq')">Faq</a></li>
+                                                <li><a (click)="global.setRoute('contact')">Contacto</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -130,7 +133,7 @@
                             </div>
                         </div>
                         <div class="header-button">
-                            <a href="#" class="theme-btn">
+                            <a (click)="global.setRoute('contact')" class="theme-btn">
                                 Contáctanos
                                 <i class="fa-solid fa-arrow-right-long"></i>
                             </a>

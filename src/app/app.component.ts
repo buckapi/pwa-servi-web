@@ -8,6 +8,8 @@ import { FooterComponent } from './components/ui/footer/footer.component';
 import { HeaderComponent } from './components/ui/header/header.component';
 import { GlobalService } from './services/global.service';
 import { CommonModule } from '@angular/common';
+import { ContactComponent } from './components/contact/contact.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +19,9 @@ import { CommonModule } from '@angular/common';
     AboutComponent,
     FooterComponent,
     HeaderComponent,
-    CommonModule
+    CommonModule,
+    ContactComponent,
+    FaqComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
