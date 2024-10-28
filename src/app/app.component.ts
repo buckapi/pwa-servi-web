@@ -58,15 +58,17 @@ export class AppComponent {
     
     this.scriptLoader
       .loadScripts([
-        // 'assets/js/jquery.js',
-        // 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
-        // 'assets/vendor/swiper/swiper-bundle.min.js',
-        // 'assets/vendor/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js',
-        // 'assets/vendor/grouploop-master/dist/grouploop-1.0.3.min.js',
-        // 'assets/js/dz.carousel.js',
-        // 'assets/js/settings.js',
-        // 'assets/js/custom.js',
-        // 'index,js',
+   
+/*         'assets/js/viewport.jquery.js',
+        'assets/js/bootstrap.bundle.min.js',
+        'assets/js/jquery.nice-select.min.js',
+        'assets/js/jquery.waypoints.js',
+        'assets/js/jquery.counterup.min.js',
+        'assets/js/swiper-bundle.min.js',
+        'assets/js/jquery.meanmenu.min.js',
+        'assets/js/jquery.magnific-popup.min.js',
+        'assets/js/wow.min.js',
+        'assets/js/main.js' */
       ])
       .then((data) => {
         console.log('Todos los scripts se han cargado correctamente', data);
