@@ -2,6 +2,35 @@
     margin-bottom: 50px !important;
 }
 
-.tamaño,h1 {
-    font-size:56px;
+/* .tamaño {
+    font-size: 56px; 
 }
+
+@media (max-width: 768px) {
+    .tamaño {
+        font-size: 30px; 
+    }
+} */
+
+.hero-1 .hero-content h1.tamaño {
+    font-size: 56px; /* Tamaño original */
+    color: var(--white);
+    line-height: 140%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero-1 .hero-content h1.tamaño {
+        font-size: 30px; /* Tamaño en dispositivos móviles */
+    }
+}
+
+.top {
+    padding-top: 9%;
+}
+
+.justify-content-between {
+    justify-content: space-evenly !important;
+}
+
+

@@ -164,7 +164,7 @@ h1 {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 38px;
   line-height: 125%;
   font-weight: 700;
 }
@@ -244,7 +244,7 @@ span {
 .about-wrapper .about-image-items .about-sub {
   font-size: 22px;
   color: var(--white);
-  background-color: var(--theme);
+  background-color: #f35f2a;
   padding: 18px 25px;
   border-radius: 100px;
   line-height: 1;
@@ -1665,7 +1665,7 @@ span {
   width: 94%;
   transform: translateY(-50%);
   z-index: -1;
-  border: 1px dotted var(--border);
+  /* border: 1px dotted var(--border); */
 }
 @media (max-width: 1199px) {
   .feature-wrapper-2::before {
@@ -1676,9 +1676,9 @@ span {
   text-align: center;
 }
 .feature-wrapper-2 .feature-card-items .icon {
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   text-align: center;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -3370,7 +3370,8 @@ span {
   }
 }
 .hero-1.style-hero-3 {
-  padding: 220px 0 250px;
+/*   padding: 220px 0 250px;
+ */  padding: 220px 0 0px;
 }
 @media (max-width: 1199px) {
   .hero-1.style-hero-3 {
@@ -5180,8 +5181,8 @@ input.main-search-input::placeholder {
 .pricing-items.style-2 {
   padding: 30px;
   position: relative;
-  border: 1px solid var(--border);
-  border-radius: 16px;
+/*   border: 1px solid var(--border);
+ */  border-radius: 16px;
   margin-top: 45px;
 }
 .pricing-items.style-2 .top-text {
