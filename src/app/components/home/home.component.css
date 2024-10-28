@@ -1,3 +1,7 @@
 .adicional{
     margin-bottom: 50px !important;
 }
+
+.tamaño,h1 {
+    font-size:56px;
+}

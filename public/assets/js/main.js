@@ -1,10 +1,6 @@
 /*-----------------------------------------------------------------
 
-Template Name: Web hosting & WHMCS Html Template 
-Author:  Gramentheme
-Author URI: https://themeforest.net/user/gramentheme/portfolio
-Version: 1.0.0
-Description: Web hosting & WHMCS Html Template <
+
 
 -------------------------------------------------------------------
 CSS TABLE OF CONTENTS
