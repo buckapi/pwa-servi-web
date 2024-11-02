@@ -34,6 +34,7 @@ import { DeveloperwebComponent } from './components/developerweb/developerweb.co
 })
 export class AppComponent {
   title = 'newservices';
+  
   constructor(
 
     public loadStyleService: LoadStyleServiceService,
@@ -56,23 +57,27 @@ export class AppComponent {
     this.loadStyleService.loadStyle('assets/css/color.css');
     this.loadStyleService.loadStyle('assets/css/main.css');
     
-    this.scriptLoader
-      .loadScripts([
-   
-/*         'assets/js/viewport.jquery.js',
-        'assets/js/bootstrap.bundle.min.js',
-        'assets/js/jquery.nice-select.min.js',
-        'assets/js/jquery.waypoints.js',
-        'assets/js/jquery.counterup.min.js',
-        'assets/js/swiper-bundle.min.js',
-        'assets/js/jquery.meanmenu.min.js',
-        'assets/js/jquery.magnific-popup.min.js',
-        'assets/js/wow.min.js',
-        'assets/js/main.js' */
-      ])
-      .then((data) => {
-        console.log('Todos los scripts se han cargado correctamente', data);
-      })
-      .catch((error) => console.error('Error al cargar los scripts', error));
+    if (typeof document !== 'undefined') {
+      this.scriptLoader
+        .loadScripts([
+          'assets/js/jquery-3.7.1.min.js',
+          'assets/js/viewport.jquery.js',
+          'assets/js/bootstrap.bundle.min.js',
+          'assets/js/jquery.nice-select.min.js',
+          'assets/js/jquery.waypoints.js',
+          'assets/js/jquery.counterup.min.js',
+          'assets/js/swiper-bundle.min.js',
+          'assets/js/jquery.meanmenu.min.js',
+          'assets/js/jquery.magnific-popup.min.js',
+          'assets/js/wow.min.js',
+          'assets/js/main.js'
+        ])
+        .then((data) => {
+          console.log('Todos los scripts se han cargado correctamente', data);
+        })
+        .catch((error) => console.error('Error al cargar los scripts', error));
+    }
+  
   }
+ 
 }

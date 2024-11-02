@@ -17,12 +17,14 @@
 
         <!-- Offcanvas Area Start -->
         <div class="fix-area">
+            
             <div class="offcanvas__info">
+                
                 <div class="offcanvas__wrapper">
                     <div class="offcanvas__content">
                         <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                             <div class="offcanvas__logo">
-                                <a href="#">
+                                <a (click)="global.setRoute('home')">
                                     <img src="assets/img/logo/black-logo.png" alt="logo-img">
                                 </a>
                             </div>
@@ -37,8 +39,13 @@
 							diseño web y soporte a quienes tienen la necesidad de rentar un espacio
 							específico en la web para crecer su mercado digital.
                         </p>
-                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="mobile-menu fix mb-3" >
+                            
+                        </div>
+                       
+                        
                         <div class="offcanvas__contact">
+                                                      
                             <h4>Información de contacto</h4>
                             <ul>
                                 <li class="d-flex align-items-center">
@@ -54,7 +61,7 @@
                                         <i class="fal fa-envelope"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a href="mailto:infoexample.com"><span class="mailto:contacto&#64;servi-web.com">contacto&#64;servi-web.com</span></a>
+                                        <a href="mailto:contacto&#64;servi-web.com"><span >contacto&#64;servi-web.com</span></a>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -62,7 +69,7 @@
                                         <i class="fal fa-clock"></i>
                                     </div>
                                     <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="#">Lunes-Domingo, 24/7 H.</a>
+                                        <a >Lunes-Domingo, 24/7 H.</a>
                                     </div>
                                 </li>
                                 <li class="d-flex align-items-center">
@@ -89,6 +96,5 @@
                 </div>
             </div>
         </div>
-        <div class="offcanvas__overlay"></div>
         
 </div>

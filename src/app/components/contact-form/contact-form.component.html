@@ -1,0 +1,19 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="name">Nombre:</label>
+    <input id="name" formControlName="name" required>
+  
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" required>
+  
+    <label for="service">Servicio:</label>
+    <select id="service" formControlName="service" required>
+      <option value="" disabled selected>Selecciona un servicio</option>
+      <option *ngFor="let service of services" [value]="service.value">{{ service.viewValue }}</option>
+    </select>
+  
+    <label for="message">Mensaje:</label>
+    <textarea id="message" formControlName="message" required></textarea>
+  
+    <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+  </form>
+  

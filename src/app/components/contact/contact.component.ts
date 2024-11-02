@@ -1,11 +1,12 @@
 import { Component, OnInit, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { GlobalService } from '../../services/global.service';
+import { ContactFormComponent } from "../contact-form/contact-form.component";
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [ContactComponent, ContactFormComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
