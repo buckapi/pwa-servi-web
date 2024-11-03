@@ -2932,8 +2932,8 @@ span {
 .nice-select::after {
   height: 8px;
   width: 8px;
-  right: -25px;
-  top: 15px;
+  right: 16px;
+  top: -36px;
   border-color: var(--header);
   border-bottom: 2px solid var(--header);
   border-right: 2px solid var(--header);
@@ -6231,7 +6231,7 @@ input.main-search-input::placeholder {
 }
 
 .section-padding {
-  padding: 130px 0;
+  padding: 90px 0;
 }
 @media (max-width: 1199px) {
   .section-padding {

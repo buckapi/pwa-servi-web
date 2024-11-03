@@ -1,0 +1,13 @@
+.categorys{
+    display: flex !important;
+}
+
+.nice-select::after  {
+    height: 8px;
+    width: 8px;
+    right: 16px !important;
+    top: -36px !important;
+    border-color: var(--header);
+    border-bottom: 2px solid var(--header);
+    border-right: 2px solid var(--header);
+}

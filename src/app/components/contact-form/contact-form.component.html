@@ -1,19 +1,85 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <label for="name">Nombre:</label>
-    <input id="name" formControlName="name" required>
-  
-    <label for="email">Email:</label>
-    <input id="email" formControlName="email" required>
-  
-    <label for="service">Servicio:</label>
-    <select id="service" formControlName="service" required>
-      <option value="" disabled selected>Selecciona un servicio</option>
-      <option *ngFor="let service of services" [value]="service.value">{{ service.viewValue }}</option>
-    </select>
-  
-    <label for="message">Mensaje:</label>
-    <textarea id="message" formControlName="message" required></textarea>
-  
-    <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
-  </form>
-  
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form-items">
+  <div class="row g-4">
+
+      <!-- Campo Nombre -->
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+          <div class="form-clt">
+              <input type="text" formControlName="name" id="name"
+                  placeholder="Nombre completo" class="form-control" />
+              <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid"
+                  class="error-message">
+                  <small *ngIf="contactForm.get('name')?.errors?.['required']">El nombre es
+                      obligatorio.</small>
+                  <small *ngIf="contactForm.get('name')?.errors?.['minlength']">El nombre debe
+                      tener al menos 3 caracteres.</small>
+              </div>
+          </div>
+      </div>
+
+      <!-- Campo Correo -->
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+          <div class="form-clt">
+              <input type="email" formControlName="email" id="email" placeholder="Su correo"
+                  class="form-control" />
+              <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid"
+                  class="error-message">
+                  <small *ngIf="contactForm.get('email')?.errors?.['required']">El correo es
+                      obligatorio.</small>
+                  <small *ngIf="contactForm.get('email')?.errors?.['email']">Debe ingresar un
+                      correo válido.</small>
+              </div>
+          </div>
+      </div>
+
+      <!-- Campo Servicio -->
+      <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+          <div class="form-clt">
+              <label>Seleccione el servicio para la solicitud</label>
+              <select formControlName="service" class="form-control categorys ">
+                  <option *ngFor="let service of services" [value]="service.value">
+                      {{ service.viewValue }}
+                  </option>
+              </select>
+              <div *ngIf="contactForm.get('service')?.touched && contactForm.get('service')?.invalid"
+                  class="error-message">
+                  <small>Debe seleccionar un servicio.</small>
+              </div>
+          </div>
+      </div>
+
+      <!-- Campo Mensaje -->
+      <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+          <div class="form-clt">
+              <textarea formControlName="message" id="message"
+                  placeholder="Indiquenos que nombre de dominio desea adquirir"
+                  class="form-control"></textarea>
+              <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid"
+                  class="error-message">
+                  <small *ngIf="contactForm.get('message')?.errors?.['required']">El mensaje es
+                      obligatorio.</small>
+                  <small *ngIf="contactForm.get('message')?.errors?.['minlength']">El mensaje
+                      debe tener al menos 10 caracteres.</small>
+              </div>
+          </div>
+      </div>
+
+      <!-- Campo Aceptar Términos -->
+      <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+          <div class="form-check d-flex gap-2 from-customradio">
+              <input type="checkbox" formControlName="acceptTerms" class="form-check-input"
+                  id="acceptTerms" />
+              <label class="form-check-label" for="acceptTerms">Aceptar y Proteger Mis
+                  Datos</label>
+              <div *ngIf="contactForm.get('acceptTerms')?.touched && contactForm.get('acceptTerms')?.invalid"
+                  class="error-message">
+                  <small>Debe aceptar los términos y condiciones.</small>
+              </div>
+          </div>
+
+          <!-- Botón Enviar -->
+          <button type="submit" class="theme-btn">
+              Enviar <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+      </div>
+  </div>
+</form>
