@@ -35,7 +35,9 @@ import { ViewportScroller } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   title = 'newservices';
-  
+  isServiciosOpen = false;
+isSoporteOpen = false;
+
   constructor(
 
     public loadStyleService: LoadStyleServiceService,

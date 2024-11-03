@@ -6,20 +6,14 @@
     <app-planing [hidden]="global.activeRoute!='planing'"></app-planing>
     <app-domine [hidden]="global.activeRoute!='domine'"></app-domine>
     <app-developerweb [hidden]="global.activeRoute!='developerweb'"></app-developerweb>
-
     <app-faq [hidden]="global.activeRoute!='faq'"></app-faq>
 
     <app-footer ></app-footer>
-
-	
 		<div class="mouse-cursor cursor-outer"></div>
         <div class="mouse-cursor cursor-inner"></div>
-
         <!-- Offcanvas Area Start -->
-        <div class="fix-area">
-            
-            <div class="offcanvas__info">
-                
+        <div class="fix-area">            
+            <div class="offcanvas__info">                
                 <div class="offcanvas__wrapper">
                     <div class="offcanvas__content">
                         <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
@@ -39,13 +33,38 @@
 							diseño web y soporte a quienes tienen la necesidad de rentar un espacio
 							específico en la web para crecer su mercado digital.
                         </p>
-                        <div class="mobile-menu fix mb-3" >
-                            
+                        <div class="mobile-menu fix mb-3" > 
+                            <nav class="main-menu mean__menu-wrapper d-flex fontmenu">
+                                <ul>
+                                    <li class="has-dropdown active d-xl-none">
+                                        <a (click)="global.setRoute('home')">Inicio</a>
+                                    </li>
+                                    <li class="has-dropdown active d-xl-none">
+                                        <a (click)="global.setRoute('about')">Sobre Nosotros</a>
+                                    </li>
+                                    <li class="has-dropdown d-xl-none" [class.active]="isServiciosOpen">
+                                        <a (click)="isServiciosOpen = !isServiciosOpen">
+                                            Servicios <i class="fas fa-angle-down"></i>
+                                        </a>
+                                        <ul class="submenu" *ngIf="isServiciosOpen">
+                                            <li><a (click)="global.setRoute('planing')">Hosting</a></li>
+                                            <li><a (click)="global.setRoute('domine')">Dominios</a></li>
+                                            <li><a (click)="global.setRoute('developerweb')">Páginas Web</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown d-xl-none" [class.active]="isSoporteOpen">
+                                        <a (click)="isSoporteOpen = !isSoporteOpen">
+                                            Soporte <i class="fas fa-angle-down"></i>
+                                        </a>
+                                        <ul class="submenu" *ngIf="isSoporteOpen">
+                                            <li><a (click)="global.setRoute('contact')">Contacto</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                                                     
                         </div>
-                       
-                        
-                        <div class="offcanvas__contact">
-                                                      
+                        <div class="offcanvas__contact">                                                      
                             <h4>Información de contacto</h4>
                             <ul>
                                 <li class="d-flex align-items-center">
@@ -86,7 +105,7 @@
                                    Consultas <i class="fa-solid fa-arrow-right-long"></i>
                                 </a>
                             </div>
-                            <div class="social-icon d-flex align-items-center">
+                            <div class="social-icon d-flex align-items-center" style="padding-bottom: 20px;">
                                 <a href="https://www.facebook.com/profile.php?id=61567176527689&mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://www.instagram.com/somos_servi_web?igsh=MWExM3JtanhvNTY5aw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
                               

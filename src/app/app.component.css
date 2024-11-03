@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .fontmenu {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .ul{
+        padding: 6px;}
+    .li.ul{
+        margin-left: 2%;
+    }
+  }
