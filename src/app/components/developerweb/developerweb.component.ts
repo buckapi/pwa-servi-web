@@ -25,7 +25,8 @@ export class DeveloperwebComponent {
 constructor (
   public global: GlobalService,
   private fb: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    
 ){
   this.developerForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],

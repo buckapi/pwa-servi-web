@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,11 @@ import { GlobalService } from '../../services/global.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent  {
 constructor(
-  public global: GlobalService
+  public global: GlobalService,
+  private viewportScroller: ViewportScroller
+
 ){}
 }
+

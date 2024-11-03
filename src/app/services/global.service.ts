@@ -6,7 +6,10 @@ import { Injectable } from '@angular/core';
 export class GlobalService {
   activeRoute = 'home';
   constructor() { }
+  
   setRoute(route: string) {
     this.activeRoute = route;
+    window.scrollTo(0, 0);
   }
+  
 }

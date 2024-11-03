@@ -39,6 +39,7 @@ export class DomineComponent {
       acceptTerms: [false, Validators.requiredTrue]
     });
   }
+  
 
   onSubmit() {
     if (this.domineform.valid) {

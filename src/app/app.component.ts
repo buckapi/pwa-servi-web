@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoadStyleServiceService } from './services/load-style-service.service';
 import { ScriptLoaderService } from './services/script-loader.service';
@@ -13,6 +13,7 @@ import { FaqComponent } from './components/faq/faq.component';
 import { PlaningComponent } from './components/planing/planing.component';
 import { DomineComponent } from './components/domine/domine.component';
 import { DeveloperwebComponent } from './components/developerweb/developerweb.component';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -32,19 +33,21 @@ import { DeveloperwebComponent } from './components/developerweb/developerweb.co
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'newservices';
   
   constructor(
 
     public loadStyleService: LoadStyleServiceService,
     public scriptLoader: ScriptLoaderService,
-    public global: GlobalService
+    public global: GlobalService,
+
   ){
 
   }
   ngOnInit(): void {
     this.theme();
+
   }
   theme() {
     this.loadStyleService.loadStyle('assets/css/bootstrap.min.css');

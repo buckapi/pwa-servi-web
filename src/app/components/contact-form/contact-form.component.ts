@@ -34,6 +34,7 @@ export class ContactFormComponent {
       acceptTerms: [false, Validators.requiredTrue]
     });
   }
+  
 
   onSubmit() {
     if (this.contactForm.valid) {
